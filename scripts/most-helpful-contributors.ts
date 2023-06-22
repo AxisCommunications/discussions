@@ -73,7 +73,7 @@ const createBody = (answers: Count[], interactions: Count[]) => {
     "",
     "## Most active in discussions",
     "",
-    "The following GitHub users have been active in discussions. They are valued for their effort in asking questions, providing context and in general driving the conversation forward.",
+    "The following GitHub users have been active in discussions. They are valued for their effort in asking for clarification, providing context and in general driving the conversation forward.",
     "",
     "| Position | GitHub user | Number of interactions |",
     "| :------: | ----------- | :--------------------: |",
