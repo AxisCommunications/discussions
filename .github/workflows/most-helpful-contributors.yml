@@ -1,6 +1,8 @@
 name: Most helpful contributors
 
 on:
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -8,7 +10,15 @@ permissions:
   discussions: write
 
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, world!"
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
+      - run: npm ci
+      - run: npm run build
+      - run: node dist/most-helpful-contributors.js ${{ env.DISCUSSION_ID }} ${{ secrets.GITHUB_TOKEN }}
+        env:
+          DISCUSSION_ID: D_kwDOHOfQ684AUUSB
