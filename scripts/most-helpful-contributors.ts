@@ -113,9 +113,6 @@ const main = async () => {
   const interactions = filterInteractions(comments).sort(byCount).splice(0, 20)
 
   const body = createBody(answers, interactions)
-
-  console.log(body)
-
   await updateDiscussion(discussionId, body, personalAccessToken)
 }
 
