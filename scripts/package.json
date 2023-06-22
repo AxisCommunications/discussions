@@ -1,0 +1,17 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "Package with scripts using in this repository.",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc"
+  },
+  "dependencies": {
+    "octokit": "2.0.22"
+  },
+  "devDependencies": {
+    "@types/node": "20.3.1",
+    "typescript": "5.1.3"
+  }
+}
