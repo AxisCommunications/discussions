@@ -4,6 +4,11 @@
       "editor.formatOnSave": true,
       "editor.formatOnPaste": true
     },
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true
+    },
     "markdown.extension.list.indentationSize": "inherit",
     "markdown.extension.toc.levels": "1..3"
   }
