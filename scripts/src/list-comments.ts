@@ -42,7 +42,7 @@ export const listComments = async (organizationName: string, repositoryName: str
   const comments: Comment[] = []
 
   for (const d of discussions) {
-    for (const { discussion, isAnswer, author, replies} of d.comments.nodes) {
+    for (const { discussion, isAnswer, author, replies } of d.comments.nodes) {
       comments.push({
         discussion,
         isAnswer,
