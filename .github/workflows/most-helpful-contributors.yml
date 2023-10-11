@@ -33,6 +33,6 @@ jobs:
           node-version: lts/*
       - run: npm ci
       - run: npm run build
-      - run: node dist/most-helpful-contributors.js ${{ env.DISCUSSION_ID }} ${{ secrets.GITHUB_TOKEN }}
+      - run: node dist/most-helpful-contributors.js ${{ env.DISCUSSION_ID }} ${{ secrets.PAT }}
         env:
           DISCUSSION_ID: D_kwDOHOfQ684AUUSB
