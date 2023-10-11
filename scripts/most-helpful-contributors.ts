@@ -1,4 +1,3 @@
-import { log } from "console"
 import { Author, Comment, Reply, listComments } from "./src/list-comments"
 import { listMemberLogins } from "./src/list-member-logins"
 import { updateDiscussion } from "./src/update-discussion"
