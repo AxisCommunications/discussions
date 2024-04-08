@@ -43,11 +43,17 @@ export const listComments = async (organizationName: string, repositoryName: str
 
   for (const d of discussions) {
     for (const { discussion, isAnswer, author, replies } of d.comments.nodes) {
+      // We've sometimes seen null authors, so we'll skip those
+      if (author == null) {
+        continue
+      }
+
       comments.push({
         discussion,
         isAnswer,
         author,
-        replies: replies.nodes,
+        // We've sometimes seen null authors, so we'll skip those
+        replies: replies.nodes.filter((r) => r.author != null),
       })
     }
   }
