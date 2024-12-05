@@ -8,7 +8,7 @@
     "build": "npm run clean && tsc"
   },
   "dependencies": {
-    "octokit": "3.2.1"
+    "octokit": "4.0.2"
   },
   "devDependencies": {
     "@types/node": "22.10.1",
