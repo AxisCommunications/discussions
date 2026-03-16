@@ -5,16 +5,16 @@ export const updateDiscussion = async (discussionId: string, body: string, perso
     auth: personalAccessToken,
   })
 
-  const query = createQuery(discussionId, body)
-  await octokit.graphql(query)
+  const query = createQuery()
+  await octokit.graphql(query, { discussionId, body })
 }
 
-const createQuery = (discussionId: string, body: string): string => {
+const createQuery = (): string => {
   return `
-    mutation {
+    mutation($discussionId: ID!, $body: String!) {
       updateDiscussion(input: {
-        discussionId: "${discussionId}"
-        body: "${body}"
+        discussionId: $discussionId
+        body: $body
       }) {
         clientMutationId
       }
